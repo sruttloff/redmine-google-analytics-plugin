@@ -1,20 +1,27 @@
 <p>
-  <%= raw l(:google_analytics_directions) %>
+  <%= sanitize l(:google_analytics_directions), tags: %w[a], attributes: %w[href] %>
 </p>
 
 <p>
-  <label><%= l(:google_analytics_code_label) %></label><%= text_area_tag 'settings[google_analytics_code]', @settings['google_analytics_code'], :rows => 10, :cols => 85 %>
+  <%= label_tag 'settings_google_analytics_code', l(:google_analytics_code_label) %>
+  <%= text_area_tag 'settings[google_analytics_code]', settings['google_analytics_code'], rows: 10, cols: 85 %>
 </p>
 
 <p>
-  <label><%= l(:google_analytics_log_anonymous_label) %></label><%= check_box_tag 'settings[google_analytics_log_anonymous]', '1', @settings['google_analytics_log_anonymous'] %>
+  <%= label_tag 'settings_google_analytics_log_anonymous', l(:google_analytics_log_anonymous_label) %>
+  <%= hidden_field_tag 'settings[google_analytics_log_anonymous]', '0', id: nil %>
+  <%= check_box_tag 'settings[google_analytics_log_anonymous]', '1', GoogleAnalyticsHooks.tracking_enabled?(settings['google_analytics_log_anonymous']) %>
 </p>
 
 <p>
-  <label><%= l(:google_analytics_log_authenticated_label) %></label><%= check_box_tag 'settings[google_analytics_log_authenticated]', '1', @settings['google_analytics_log_authenticated'] %>
+  <%= label_tag 'settings_google_analytics_log_authenticated', l(:google_analytics_log_authenticated_label) %>
+  <%= hidden_field_tag 'settings[google_analytics_log_authenticated]', '0', id: nil %>
+  <%= check_box_tag 'settings[google_analytics_log_authenticated]', '1', GoogleAnalyticsHooks.tracking_enabled?(settings['google_analytics_log_authenticated']) %>
 </p>
 
 <p>
-  <label><%= l(:google_analytics_log_administrator_label) %></label><%= check_box_tag 'settings[google_analytics_log_administrator]', '1', @settings['google_analytics_log_administrator'] %>
+  <%= label_tag 'settings_google_analytics_log_administrator', l(:google_analytics_log_administrator_label) %>
+  <%= hidden_field_tag 'settings[google_analytics_log_administrator]', '0', id: nil %>
+  <%= check_box_tag 'settings[google_analytics_log_administrator]', '1', GoogleAnalyticsHooks.tracking_enabled?(settings['google_analytics_log_administrator']) %>
 </p>
 

@@ -1,6 +1,6 @@
 de:
-  google_analytics_directions: Bitte den <a href="http://www.google.com/analytics/">Google Analytics</a>-JavaScript-Code in das Textfeld einfügen und die gewünschten Tracking-Optionen auswählen.
-  google_analytics_code_label: Google Analytics-Code (inklusive <script>-Tags)
+  google_analytics_directions: Den vollständigen Tracking-Code von <a href="https://analytics.google.com/">Google Analytics</a> oder Matomo inklusive Script-Tags einfügen und die gewünschten Benutzergruppen auswählen. Für Administratoren gilt eine eigene Option. Ein leeres Codefeld deaktiviert das Tracking. Der Code wird im Seitenkopf eingefügt und für die ausgewählten Besucher ausgeführt.
+  google_analytics_code_label: Tracking-Code (inklusive Script-Tags)
   google_analytics_log_anonymous_label: Anonyme Benutzer tracken
-  google_analytics_log_authenticated_label: Authentifizierte Benutzer tracken
+  google_analytics_log_authenticated_label: Angemeldete Benutzer tracken (ohne Administratoren)
   google_analytics_log_administrator_label: Administratoren tracken

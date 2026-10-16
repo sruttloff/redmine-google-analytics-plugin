@@ -9,3 +9,4 @@ Contributors
 * Tobias Fischer (pagina GmbH) / https://github.com/paginagmbh/redmine-google-analytics-plugin
 * Marcelo Romulo Fernandes
 * Michael Pirogov
+* SaaS-Secure.com, S. Ruttloff / https://www.saas-secure.com/ (Redmine 6.1 adaptation)
